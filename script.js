@@ -14,7 +14,22 @@ function getComputerChoice() {
         return 'Rock';
     }
 
-    return randomValue;
 }
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
+
+function getHumanChoice() {
+
+    let choice = +prompt('Make your choice').toLowerCase();
+    
+    while(!choice) {
+
+         +prompt('Try again, choice is missing');
+
+        if(choice === null) {
+            break;
+        }
+    }
+}
+
+getHumanChoice();
