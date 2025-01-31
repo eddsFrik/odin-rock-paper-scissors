@@ -29,4 +29,3 @@ function getHumanChoice() {
     return choice[0].toUpperCase() + choice.slice(1).toLowerCase();
 }
 
-console.log(getHumanChoice());
