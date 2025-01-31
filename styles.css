@@ -1,8 +1,7 @@
 body {
-    min-height: 100vh;
     background-color: #3a3a3a;
     color: #c3c3c3;
-    display: grid;
-    place-content: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+h1 { text-align: center; }
