@@ -16,20 +16,17 @@ function getComputerChoice() {
 
 }
 
-// console.log(getComputerChoice());
+
 
 function getHumanChoice() {
 
-    let choice = +prompt('Make your choice').toLowerCase();
-    
-    while(!choice) {
+    let choice = prompt('Make your choice...');
 
-         +prompt('Try again, choice is missing');
-
-        if(choice === null) {
-            break;
-        }
+    if(typeof choice === 'number') {
+        return prompt('Try again, choice is missing.');
     }
+
+    return choice[0].toUpperCase() + choice.slice(1).toLowerCase();
 }
 
-getHumanChoice();
+console.log(getHumanChoice());
