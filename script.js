@@ -21,11 +21,8 @@ function getComputerChoice() {
 function getHumanChoice() {
 
     let choice = prompt('Make your choice...');
+    let capitalizeChoice = choice[0].toUpperCase() + choice.slice(1).toLowerCase();
 
-    if(typeof choice === 'number') {
-        return prompt('Try again, choice is missing.');
-    }
-
-    return choice[0].toUpperCase() + choice.slice(1).toLowerCase();
+    return capitalizeChoice;
 }
 
