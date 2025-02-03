@@ -43,7 +43,7 @@ function playRound(humanChoice, computerChoice) {
     ) {
         humanScore += 1;
         alert(`You win: ${humanChoice} beats ${computerChoice}`)
-        alert(`Score: You: ${ humanScore} | COM: ${ computerScore}`);
+        alert(`Score: You: ${humanScore} | COM: ${computerScore}`);
     }
 
     if(
@@ -53,7 +53,7 @@ function playRound(humanChoice, computerChoice) {
     ) {
         computerScore += 1;
         alert(`COM wins: ${computerChoice} beats ${humanChoice}`);
-        alert(`Score: COM: ${ computerScore} | You: ${ humanScore}`);
+        alert(`Score: COM: ${computerScore} | You: ${humanScore}`);
     }
 }
 
