@@ -42,7 +42,7 @@ function playRound(humanChoice, computerChoice) {
         (humanChoice == 'Paper' && computerChoice == 'Rock')
     ) {
         humanScore += 1;
-        alert(`You win: ${humanChoice} beats ${computerChoice}`)
+        alert(`You win: ${humanChoice} beats ${computerChoice}`);
         alert(`Score: You: ${humanScore} | COM: ${computerScore}`);
     }
 
@@ -57,7 +57,31 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
 
-playRound(humanSelection, computerSelection);
+    for( let i = 0; i <= 5; i++ ) {
+        
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+
+        playRound(humanSelection, computerSelection);
+    }
+
+    if(humanScore > computerScore) {
+        alert('✨🎉 ¡ YOU WIN ! 🎉✨ ');
+        alert(`Here is your score: YOU: ${humanScore} | COM: ${computerScore}`);
+    }
+
+    if(humanScore < computerScore) {
+        alert('💩☠️ ¡ YOU LOSE ! ☠️💩');
+        alert(`Here is your score: COM: ${computerScore} | YOU: ${humanScore}`);
+    }
+
+    if(humanScore === computerScore) {
+        alert(`😶‍🌫️🥶 ¡ IT'S A TIE ! 🥶😶‍🌫️`);
+        alert(`Here is your score: YOU: ${humanScore} | COM: ${computerScore}`);
+    }
+}
+
+
+playGame();
