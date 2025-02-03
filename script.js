@@ -31,10 +31,33 @@ function getHumanChoice() {
 
 
 function playRound(humanChoice, computerChoice) {
-    //Working on :D
+    
+    if(humanChoice === computerChoice) {
+        alert(`It's a tie: You choose: ${humanChoice} | COM choose: ${computerChoice}`);
+    }
+
+    if(
+        (humanChoice == 'Rock' && computerChoice == 'Scissors') ||
+        (humanChoice == 'Scissors' && computerChoice == 'Paper') ||
+        (humanChoice == 'Paper' && computerChoice == 'Rock')
+    ) {
+        humanScore += 1;
+        alert(`You win: ${humanChoice} beats ${computerChoice}`)
+        alert(`Score: You: ${ humanScore} | COM: ${ computerScore}`);
+    }
+
+    if(
+        (computerChoice == 'Rock' && humanChoice == 'Scissors') ||
+        (computerChoice == 'Scissors' && humanChoice == 'Paper') ||
+        (computerChoice == 'Paper' && humanChoice == 'Rock')
+    ) {
+        computerScore += 1;
+        alert(`COM wins: ${computerChoice} beats ${humanChoice}`);
+        alert(`Score: COM: ${ computerScore} | You: ${ humanScore}`);
+    }
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-console.log(playRound(humanSelection, computerSelection));
+playRound(humanSelection, computerSelection);
